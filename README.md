@@ -4,15 +4,11 @@
 <table>
   <tr>
     <td>Node.js</td>
-    <td>soap library</td>
+    <td>Biblioteca soap</td>
   </tr>
 </table>
 
-<h3>Comandos cmd{
-  npm install soap
-  npm init
-  yarn add soap
-}</h3>
+<h3>instalar o soap no windows{npm install soap, npm init, yarn add soap}</h3>
 
 
 <p>Acessando o arquivo</p>
