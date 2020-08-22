@@ -16,4 +16,4 @@
 ![screenshot](cmd.png)
 
 <h3>Author</h3>
-José Lucas Gonçalves Freitas
+<a href="https://www.instagram.com/jlucasgf/?hl=pt-br">José Lucas Gonçalves Freitas</a>
