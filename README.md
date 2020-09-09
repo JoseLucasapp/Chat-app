@@ -17,3 +17,6 @@
 
 <h3>Author</h3>
 <a href="https://www.instagram.com/jlucasgf/?hl=pt-br">José Lucas Gonçalves Freitas</a>
+
+<h3>Anotaçõs</h3>
+<p>Melhorar adicionando interface front-end</p>
