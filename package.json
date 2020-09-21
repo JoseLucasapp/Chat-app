@@ -1,0 +1,24 @@
+{
+  "name": "Acessar-CEP-com-node",
+  "version": "1.0.0",
+  "description": "<h1><b>Acessar dados passando o CEP com Node</b></h1>",
+  "main": "index.js",
+  "dependencies": {
+    "soap": "^0.32.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseLucasapp/Acessar-CEP-com-node.git"
+  },
+  "keywords": [],
+  "author": "José Lucas <josluc2016@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoseLucasapp/Acessar-CEP-com-node/issues"
+  },
+  "homepage": "https://github.com/JoseLucasapp/Acessar-CEP-com-node#readme"
+}
