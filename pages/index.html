@@ -5,10 +5,20 @@
     <body>
         <div>
             <h1>Welcome</h1>
-            <form>
-                <input type="text" />
+            <form id="form">
+                <input id="name" type="text" />
                 <button>Send</button>
             </form>
         </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            let socket = io();
+            document.querySelector('#form').addEventListener('submit',(e)=>{
+                e.preventDefault();
+                name = document.getElementById('name').value;
+                socket.emit('name', name);
+                return false;
+            });
+        </script>
     </body>
 </html>
