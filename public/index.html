@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<html>
+    <head>
+        <title>JLchat</title>
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <div class="root">
+            <div class="user">
+                <form id="form">
+                    <h1>User</h1>
+                    <input id="username" type="text" />
+                    <button id="userbtn">Ok</button>
+                </form>
+                <div class="online">
+                    <h2>Online</h2>
+                    <ul id="users"></ul>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="campo_msg">
+                    <ul class="msg" id="msg"></ul>
+                </div>
+                <form id="formmsg">
+                    <input type="text" id="message" />
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
+            
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
