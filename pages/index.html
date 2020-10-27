@@ -1,15 +1,28 @@
 <meta charset="utf-8">
 <html>
-    <head></head>
-    <link rel="stylesheet" href="../style/style.css" />
+    <head>
+        <title>JLchat</title>
+    </head>
     <body>
-        <div>
-            <h1>Welcome</h1>
-            <form id="form">
-                <input id="name" type="text" />
-                <button>Send</button>
-            </form>
+        <div class="root">
+            <div class="user">
+                <form id="form">
+                    <h1>User</h1>
+                    <input id="name" type="text" /><br />
+                    <button>OK</button>
+                </form>
+            </div>
+            <div class="chat">
+                <div class="campo_msg">
+                    <ul class="msg"></ul>
+                </div>
+                <form>
+                    <input type="text" />
+                    <button>Send</button>
+                </form>
+            </div>
         </div>
+            
         <script src="/socket.io/socket.io.js"></script>
         <script>
             let socket = io();
@@ -20,5 +33,66 @@
                 return false;
             });
         </script>
+
+        <style>
+            *{margin: 0;padding: 0;}
+            .user{
+                position: absolute;
+                width: 20%;
+                height: 90%;
+                margin-left: 5%;
+                background-color: red;
+                margin-top: 2.5%;
+                text-align: center;
+            }
+            .user h1{
+                margin-top: 10%;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .user input{
+                margin-top: 5%;
+                width: 90%;
+                height: 5%;
+                font-size: 20px;
+            }
+            .user button{
+                margin-top: 5%;
+                width: 30%;
+                height: 5%;
+                font-size: 15px;
+            }
+            .chat{
+                position: absolute;
+                width: 70%;
+                height: 90%;
+                background-color: rebeccapurple;
+                margin-left: 25%;
+                margin-top: 2.5%;
+            }
+            .chat form{
+                position: absolute;
+                margin-left: 5%;
+                width: 100%;
+                height: 10%;
+                bottom: 1px;
+            }
+            .chat input{
+                width: 70%;
+                height: 50%;
+            }
+            .chat button{
+                height: 50%;
+                width: 20%;
+            }
+            .campo_msg{
+                width: 80%;
+                height: 70%;
+                margin-left: 10%;
+                margin-top: 5%;
+                background-color: white;
+            }
+        </style>
     </body>
 </html>
