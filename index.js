@@ -11,9 +11,8 @@ io.on('connection',(socket)=>{
     socket.on('disconnect',()=>{
         console.log('disconect');
     });
-    socket.on('name',(name)=>{
-        console.log(name);
-        io.emit('name',name);
+    socket.on('message',(message,name)=>{
+        io.emit('message',message,name);
     });
 });
 

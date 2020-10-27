@@ -8,34 +8,45 @@
             <div class="user">
                 <form id="form">
                     <h1>User</h1>
-                    <input id="name" type="text" /><br />
-                    <button>OK</button>
+                    <input id="username" type="text" />
                 </form>
             </div>
             <div class="chat">
                 <div class="campo_msg">
-                    <ul class="msg"></ul>
+                    <ul class="msg" id="msg"></ul>
                 </div>
-                <form>
-                    <input type="text" />
+                <form id="formmsg">
+                    <input type="text" id="message" />
                     <button>Send</button>
                 </form>
             </div>
         </div>
             
         <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script>
             let socket = io();
-            document.querySelector('#form').addEventListener('submit',(e)=>{
-                e.preventDefault();
-                name = document.getElementById('name').value;
-                socket.emit('name', name);
+            document.querySelector('#username').addEventListener('blur',(e)=>{
+                document.querySelector('#username').readOnly = true;
                 return false;
+            });
+            document.querySelector('#formmsg').addEventListener('submit',(e)=>{
+                e.preventDefault();
+                msg = document.getElementById('message').value;
+                name = document.getElementById('username').value;
+                socket.emit('message', msg, name);
+                return false;
+            });
+            socket.on('message',(message,name)=>{
+                $('#msg').append($('<li>').text(name + ': ' + message));
             });
         </script>
 
         <style>
-            *{margin: 0;padding: 0;}
+            html, body {
+                height: 100%;
+            }
+            *{margin: 0;padding: 0;box-sizing: border-box;}
             .user{
                 position: absolute;
                 width: 20%;
@@ -92,6 +103,14 @@
                 margin-left: 10%;
                 margin-top: 5%;
                 background-color: white;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .campo_msg li{
+                list-style: none;
+                font-size: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
             }
         </style>
     </body>
