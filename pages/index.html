@@ -9,6 +9,7 @@
                 <form id="form">
                     <h1>User</h1>
                     <input id="username" type="text" />
+                    <button id="userbtn">Ok</button>
                 </form>
                 <div class="online">
                     <h2>Online</h2>
@@ -41,8 +42,18 @@
                 socket.emit('message', msg, name);
                 return false;
             });
+            document.querySelector('#userbtn').addEventListener('click',(e)=>{
+                e.preventDefault();
+                document.querySelector('#userbtn').disabled = true;
+                user = document.querySelector('#username').value;
+                socket.emit('user', user);
+                return false;
+            })
             socket.on('message',(message,name)=>{
                 $('#msg').append($('<li>').text(name + ': ' + message));
+            });
+            socket.on('user',(user)=>{
+                $('#users').append($('<li>').text(user));
             });
         </script>
 
@@ -122,6 +133,11 @@
                 width: 90%;
                 margin-top: 5%;
                 margin-left: 5%;
+            }
+            .online ul{
+                margin-top: 2%;
+                list-style: none;
+                font-size: 20px;
             }
         </style>
     </body>

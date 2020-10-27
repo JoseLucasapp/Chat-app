@@ -10,6 +10,9 @@ io.on('connection',(socket)=>{
     socket.on('message',(message,name)=>{
         io.emit('message',message,name);
     });
+    socket.on('user',(user)=>{
+        io.emit('user',user);
+    });
 });
 
 http.listen(port);
