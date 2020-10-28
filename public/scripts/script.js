@@ -7,7 +7,11 @@ document.querySelector('#formmsg').addEventListener('submit', (e) => {
     e.preventDefault();
     msg = document.getElementById('message').value;
     name = document.getElementById('username').value;
-    socket.emit('message', msg, name);
+    let msgObject = {
+        message: msg,
+        name: name,
+    };
+    socket.emit('message', msgObject);
     return false;
 });
 document.querySelector('#userbtn').addEventListener('click', (e) => {
@@ -17,9 +21,27 @@ document.querySelector('#userbtn').addEventListener('click', (e) => {
     socket.emit('user', user);
     return false;
 })
-socket.on('message', (message, name) => {
-    $('#msg').append($('<li>').text(name + ': ' + message));
+socket.on('message', (msgObject) => {
+    renderMsg(msgObject);
 });
 socket.on('user', (user) => {
-    $('#users').append($('<li>').text(user));
+    renderUser(user);
 });
+
+socket.on('previous', (messages)=>{
+    for(message of messages){
+        renderMsg(message);
+    }
+});
+socket.on('previoususers', (users)=>{
+    for(user of users){
+        renderUser(user)
+    }
+})
+
+const renderMsg = (msgObject)=>{
+    $('#msg').append($('<li><strong>'+msgObject.name +': </strong>' + msgObject.message+'</li>'));
+}
+const renderUser = (user)=>{
+    $('#users').append($('<li>').text(user));
+}

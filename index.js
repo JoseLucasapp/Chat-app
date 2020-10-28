@@ -10,13 +10,21 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public/index.html');
 });
 
+
+users = []
+messages = []
+
 io.on('connection',(socket)=>{
-    socket.on('message',(message,name)=>{
-        io.emit('message',message,name);
+    socket.on('message',(msgObject)=>{
+        io.emit('message', msgObject);
+        messages.push(msgObject);
     });
     socket.on('user',(user)=>{
         io.emit('user',user);
+        users.push(user);
     });
+    socket.emit('previous', messages);
+    socket.emit('previoususers',users);
 });
 
 http.listen(port);
