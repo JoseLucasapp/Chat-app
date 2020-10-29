@@ -11,20 +11,25 @@ app.get('/',(req,res)=>{
 });
 
 
-users = []
-messages = []
+messages = [];
+users = 0;
 
 io.on('connection',(socket)=>{
+    users++;
     socket.on('message',(msgObject)=>{
         io.emit('message', msgObject);
         messages.push(msgObject);
     });
-    socket.on('user',(user)=>{
-        io.emit('user',user);
-        users.push(user);
+    socket.on('disconnect',()=>{
+        users--;
+        if(users <= 0){
+            users = 0;
+        }
+        io.emit('userOn', users);
     });
     socket.emit('previous', messages);
     socket.emit('previoususers',users);
+    socket.broadcast.emit('userOn',users);
 });
 
 http.listen(port);

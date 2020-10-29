@@ -20,12 +20,9 @@ document.querySelector('#userbtn').addEventListener('click', (e) => {
     user = document.querySelector('#username').value;
     socket.emit('user', user);
     return false;
-})
+});
 socket.on('message', (msgObject) => {
     renderMsg(msgObject);
-});
-socket.on('user', (user) => {
-    renderUser(user);
 });
 
 socket.on('previous', (messages)=>{
@@ -33,15 +30,19 @@ socket.on('previous', (messages)=>{
         renderMsg(message);
     }
 });
-socket.on('previoususers', (users)=>{
-    for(user of users){
-        renderUser(user)
-    }
-})
+
+socket.on('previoususers', (user)=>{
+    renderUser(user)
+});
+
+socket.on('userOn',(users)=>{
+    renderUser(users);
+});
 
 const renderMsg = (msgObject)=>{
     $('#msg').append($('<li><strong>'+msgObject.name +': </strong>' + msgObject.message+'</li>'));
 }
 const renderUser = (user)=>{
-    $('#users').append($('<li>').text(user));
+    document.getElementById('users').innerHTML = user + ' Online users';
+    //$('#users').append($('<li><p>'+user+'</p></li>'));
 }
