@@ -7,9 +7,9 @@ html, body {
     width: 20%;
     height: 90%;
     margin-left: 5%;
-    background-color: red;
     margin-top: 2.5%;
     text-align: center;
+    border: 1px blue solid;
 }
 .user h1{
     margin-top: 10%;
@@ -22,6 +22,7 @@ html, body {
     width: 90%;
     height: 5%;
     font-size: 20px;
+    border: 1px blue solid;
 }
 .user button{
     margin-top: 5%;
@@ -33,9 +34,9 @@ html, body {
     position: absolute;
     width: 70%;
     height: 90%;
-    background-color: rebeccapurple;
     margin-left: 25%;
     margin-top: 2.5%;
+    border: 1px blue solid;
 }
 .chat form{
     position: absolute;
@@ -47,6 +48,7 @@ html, body {
 .chat input{
     width: 70%;
     height: 50%;
+    border: 1px blue solid;
 }
 .chat button{
     height: 50%;
@@ -57,10 +59,10 @@ html, body {
     height: 70%;
     margin-left: 10%;
     margin-top: 5%;
-    background-color: white;
     flex-direction: column;
     justify-content: center;
     overflow-y: scroll;
+    border: 1px blue solid;
 }
 .campo_msg li{
     list-style: none;
