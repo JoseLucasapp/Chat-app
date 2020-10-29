@@ -19,10 +19,21 @@ document.querySelector('#userbtn').addEventListener('click', (e) => {
     document.querySelector('#userbtn').disabled = true;
     user = document.querySelector('#username').value;
     socket.emit('user', user);
+    socket.emit('disconnect', user);
     return false;
 });
 socket.on('message', (msgObject) => {
     renderMsg(msgObject);
+});
+
+socket.on('previoususersname', (usernames)=>{
+    for(user of usernames){
+        renderUserName(user);
+    }
+});
+
+socket.on('usersnames',(username)=>{
+    renderUserName(username);
 });
 
 socket.on('previous', (messages)=>{
@@ -45,4 +56,8 @@ const renderMsg = (msgObject)=>{
 const renderUser = (user)=>{
     document.getElementById('users').innerHTML = user + ' Online users';
     //$('#users').append($('<li><p>'+user+'</p></li>'));
+}
+const renderUserName = (user) => {
+    //document.querySelector('#online_users').innerHTML = '<li>'+ user +'</li>';
+    $('#online_users').append($('<li>'+ user +'</li>'));
 }

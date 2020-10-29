@@ -12,6 +12,7 @@ app.get('/',(req,res)=>{
 
 
 messages = [];
+usersnames = [];
 users = 0;
 
 io.on('connection',(socket)=>{
@@ -20,13 +21,19 @@ io.on('connection',(socket)=>{
         io.emit('message', msgObject);
         messages.push(msgObject);
     });
-    socket.on('disconnect',()=>{
+    socket.on('disconnect',(user)=>{
         users--;
         if(users <= 0){
             users = 0;
         }
+        console.log(usersnames.indexOf(user));
         io.emit('userOn', users);
     });
+    socket.on('user', (user)=>{
+        usersnames.push(user);
+        io.emit('usersnames',user);
+    });
+    socket.emit('previoususersname',usersnames);
     socket.emit('previous', messages);
     socket.emit('previoususers',users);
     socket.broadcast.emit('userOn',users);
