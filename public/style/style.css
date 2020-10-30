@@ -86,9 +86,66 @@ html, body {
     color: blue;
     font-size: 20px;
 }
+
 .online{
     border-top: 1px solid blue;
     width: 90%;
     margin-top: 5%;
     margin-left: 5%;
+}
+
+@media(max-width: 1000px){
+    .chat{
+        width: 90%;
+        height: 70%;
+        margin-top: 30%;
+        margin-left: 5%;
+    }
+    .user{
+        width: 50%;
+        height: 15%;
+        margin-left: 25%;
+    }
+    .user h1{
+        margin-top: 10%;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .user input{
+        margin-top: 5%;
+        width: 60%;
+        height: 15%;
+        font-size: 20px;
+    }
+    .chat input{
+        width: 70%;
+        height: 40%;
+        font-size: 30px;
+    }
+    .chat button{
+        width: 20%;
+        height: 40%;
+        font-size: 30px;
+    }
+    .campo_msg{
+        margin-top: 2%;
+        margin-left: 5%;
+        height: 80%;
+        width: 90%;
+    }
+    .campo_msg li{
+        font-size: 25px;
+        overflow-x: scroll;
+    }
+    .campo_msg li span{
+        font-size: 30px;
+    }
+
+    .online{
+        border: none;
+        width: 90%;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
 }
