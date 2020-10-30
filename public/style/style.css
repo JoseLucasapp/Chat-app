@@ -11,6 +11,7 @@ html, body {
     text-align: center;
     border: 1px blue solid;
     color: blue;
+    border-radius: 5px;
 }
 .user h1{
     margin-top: 10%;
@@ -53,6 +54,10 @@ html, body {
 .chat button{
     height: 50%;
     width: 20%;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue ;
+    border-radius: 5px;
 }
 .campo_msg{
     width: 80%;
