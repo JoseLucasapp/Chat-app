@@ -15,6 +15,7 @@ document.querySelector('#formmsg').addEventListener('submit', (e) => {
     document.getElementById('message').value = '';
     return false;
 });
+//send msg
 document.querySelector('#userbtn').addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('#userbtn').disabled = true;
@@ -23,10 +24,18 @@ document.querySelector('#userbtn').addEventListener('click', (e) => {
     socket.emit('disconnect', user);
     return false;
 });
+
 socket.on('message', (msgObject) => {
     renderMsg(msgObject);
 });
 
+socket.on('previous', (messages)=>{
+    for(message of messages){
+        renderMsg(message);
+    }
+});
+
+//users
 socket.on('previoususersname', (usernames)=>{
     for(user of usernames){
         renderUserName(user);
@@ -37,12 +46,6 @@ socket.on('usersnames',(username)=>{
     renderUserName(username);
 });
 
-socket.on('previous', (messages)=>{
-    for(message of messages){
-        renderMsg(message);
-    }
-});
-
 socket.on('previoususers', (user)=>{
     renderUser(user)
 });
@@ -51,14 +54,13 @@ socket.on('userOn',(users)=>{
     renderUser(users);
 });
 
+//renderer
 const renderMsg = (msgObject)=>{
     $('#msg').append($('<li><strong>'+msgObject.name +': </strong>' + msgObject.message+'</li>'));
 }
 const renderUser = (user)=>{
-    document.getElementById('users').innerHTML = user + ' Online users';
-    //$('#users').append($('<li><p>'+user+'</p></li>'));
+    document.querySelector('#users').innerHTML = user + ' Online users';
 }
 const renderUserName = (user) => {
-    //document.querySelector('#online_users').innerHTML = '<li>'+ user +'</li>';
     $('#online_users').append($('<li>'+ user +'</li>'));
 }
