@@ -26,7 +26,6 @@ io.on('connection',(socket)=>{
         if(users <= 0){
             users = 0;
         }
-        console.log(usersnames.indexOf(user));
         io.emit('userOn', users);
     });
     socket.on('user', (user)=>{

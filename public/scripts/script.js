@@ -12,6 +12,7 @@ document.querySelector('#formmsg').addEventListener('submit', (e) => {
         name: name,
     };
     socket.emit('message', msgObject);
+    document.getElementById('message').value = '';
     return false;
 });
 document.querySelector('#userbtn').addEventListener('click', (e) => {
