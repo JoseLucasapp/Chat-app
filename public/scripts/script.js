@@ -1,5 +1,19 @@
 let socket = io();
 
+document.querySelector('#username').addEventListener('blur',()=>{
+    name = document.querySelector('#username').value;
+    if(name.length > 0){
+        document.getElementById('sendbtn').disabled = false;
+        document.getElementById('sendbtn').style.borderColor = 'blue';
+        document.getElementById('sendbtn').style.color = 'blue';
+    }
+    else{
+        document.getElementById('sendbtn').disabled = true;
+        document.getElementById('sendbtn').style.borderColor = 'gray';
+        document.getElementById('sendbtn').style.color = 'gray';
+    }
+});
+
 document.querySelector('#formmsg').addEventListener('submit', (e) => {
     e.preventDefault();
     msg = document.querySelector('#message').value;

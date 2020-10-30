@@ -55,8 +55,8 @@ html, body {
     height: 50%;
     width: 20%;
     background-color: white;
-    color: blue;
-    border: 1px solid blue ;
+    color: gray;
+    border: 1px solid gray ;
     border-radius: 5px;
 }
 .campo_msg{
@@ -68,22 +68,22 @@ html, body {
     justify-content: center;
     overflow-y: scroll;
     border: 1px blue solid;
-    background-color: whitesmoke;
+    background-color: #BDBDBD;
     border-radius: 5px;
 }
 .campo_msg li{
     list-style: none;
     font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #A9E2F3;
+    background-color: #E6E6E6;
     margin: 2%;
     padding: 1%;
     height: 10%;
-    color: #5882FA;
+    color: #6E6E6E;
     border-radius: 5px;
 }
 .campo_msg li span{
-    color: blue;
+    color: black;
     font-size: 20px;
 }
 

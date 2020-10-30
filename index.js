@@ -23,7 +23,7 @@ io.on('connection',(socket)=>{
             messages.splice(0,1);
         }
     });
-    socket.on('disconnect',(user)=>{
+    socket.on('disconnect',()=>{
         users--;
         if(users <= 0){
             users = 0;
