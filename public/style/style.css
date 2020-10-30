@@ -37,7 +37,6 @@ html, body {
     height: 90%;
     margin-left: 25%;
     margin-top: 2.5%;
-    border: 1px blue solid;
 }
 .chat form{
     position: absolute;
@@ -64,15 +63,23 @@ html, body {
     justify-content: center;
     overflow-y: scroll;
     border: 1px blue solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
 }
 .campo_msg li{
     list-style: none;
-    font-size: 20px;
+    font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: red;
+    background-color: #A9E2F3;
     margin: 2%;
     padding: 1%;
     height: 10%;
+    color: #5882FA;
+    border-radius: 5px;
+}
+.campo_msg li span{
+    color: blue;
+    font-size: 20px;
 }
 .online{
     border-top: 1px solid blue;
