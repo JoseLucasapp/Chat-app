@@ -20,8 +20,7 @@ document.querySelector('#userbtn').addEventListener('click', (e) => {
     e.preventDefault();
     document.querySelector('#userbtn').disabled = true;
     user = document.querySelector('#username').value;
-    socket.emit('user', user);
-    socket.emit('disconnect', user);
+    //socket.emit('user', user);
     return false;
 });
 
@@ -36,18 +35,12 @@ socket.on('previous', (messages)=>{
 });
 
 //users
-socket.on('previoususersname', (usernames)=>{
-    for(user of usernames){
-        renderUserName(user);
-    }
-});
+//socket.on('previoususersname', (usernames)=>{for(user of usernames){renderUserName(user);}});
 
-socket.on('usersnames',(username)=>{
-    renderUserName(username);
-});
+//socket.on('usersnames',(username)=>{renderUserName(username);});
 
 socket.on('previoususers', (user)=>{
-    renderUser(user)
+    renderUser(user);
 });
 
 socket.on('userOn',(users)=>{
@@ -61,6 +54,4 @@ const renderMsg = (msgObject)=>{
 const renderUser = (user)=>{
     document.querySelector('#users').innerHTML = user + ' Online users';
 }
-const renderUserName = (user) => {
-    $('#online_users').append($('<li>'+ user +'</li>'));
-}
+//const renderUserName = (user) => {$('#online_users').append($('<li>'+ user +'</li>'));}
