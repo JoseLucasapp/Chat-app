@@ -1,22 +1,26 @@
 let socket = io();
 
+document.querySelector('#username').addEventListener('blur',()=>{
+    name = document.querySelector('#username').value;
+    if(name.length > 0){
+        document.getElementById('btnuser').disabled = false;
+        document.getElementById('sendbtn').disabled = false;
+        document.getElementById('btnuser').style.borderColor = 'blue';
+        document.getElementById('btnuser').style.color = 'blue';
+    }
+    else{
+        document.getElementById('btnuser').disabled = true;
+        document.getElementById('btnuser').style.borderColor = 'gray';
+        document.getElementById('btnuser').style.color = 'gray';
+    }
+});
+
 document.querySelector('#btnuser').addEventListener('click',(e)=>{
     e.preventDefault();
-    name = document.querySelector('#username').value;
     //document.getElementById('divChat').style.zIndex = 99;
     document.getElementById('divChat').style.visibility = 'visible';
     document.getElementById('divUser').style.zIndex = -1;
     document.getElementById('divUser').style.visibility = 'hidden';
-    if(name.length > 0){
-        document.getElementById('sendbtn').disabled = false;
-        document.getElementById('sendbtn').style.borderColor = 'blue';
-        document.getElementById('sendbtn').style.color = 'blue';
-    }
-    else{
-        document.getElementById('sendbtn').disabled = true;
-        document.getElementById('sendbtn').style.borderColor = 'gray';
-        document.getElementById('sendbtn').style.color = 'gray';
-    }
 });
 
 document.querySelector('#formmsg').addEventListener('submit', (e) => {

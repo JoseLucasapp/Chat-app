@@ -27,6 +27,7 @@ html, body {
     font-size: 20px;
     color: blue;
     background-color: transparent;
+    text-align: center;
     border: 3px blue solid;
     border-radius: 5px;
 }
@@ -35,8 +36,8 @@ html, body {
     width: 30%;
     height: 5%;
     font-size: 15px;
-    border: 2px solid blue;
-    color: blue;
+    border: 2px solid gray;
+    color: gray;
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
@@ -67,8 +68,8 @@ html, body {
     height: 50%;
     width: 20%;
     background-color: white;
-    color: gray;
-    border: 1px solid gray ;
+    color: blue;
+    border: 1px solid blue ;
     border-radius: 5px;
 }
 .campo_msg{
