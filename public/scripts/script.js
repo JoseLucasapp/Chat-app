@@ -1,7 +1,12 @@
 let socket = io();
 
-document.querySelector('#username').addEventListener('blur',()=>{
+document.querySelector('#btnuser').addEventListener('click',(e)=>{
+    e.preventDefault();
     name = document.querySelector('#username').value;
+    //document.getElementById('divChat').style.zIndex = 99;
+    document.getElementById('divChat').style.visibility = 'visible';
+    document.getElementById('divUser').style.zIndex = -1;
+    document.getElementById('divUser').style.visibility = 'hidden';
     if(name.length > 0){
         document.getElementById('sendbtn').disabled = false;
         document.getElementById('sendbtn').style.borderColor = 'blue';

@@ -6,19 +6,13 @@
     </head>
     <body>
         <div class="root">
-            <div class="user">
-                <form id="form">
-                    <h1>User</h1>
-                    <input id="username" type="text" />
-                </form>
                 <div class="online">
                     <h2>Online</h2>
                     <h3 id="users"></h3>
                     <ul id="online_users">
                     </ul>
                 </div>
-            </div>
-            <div class="chat">
+            <div class="chat" id="divChat">
                 <div class="campo_msg">
                     <ul class="msg" id="msg"></ul>
                 </div>
@@ -27,6 +21,13 @@
                     <button id='sendbtn' disabled>Send</button>
                 </form>
             </div>
+        </div>
+        <div class="user" id="divUser">
+            <h1>Welcome to 2112chat</h1>
+            <form id="form">
+                <input id="username" type="text" placeholder="Insert your name here" />
+                <button id="btnuser">Go to Chat</button>
+            </form>
         </div>
             
         <script src="/socket.io/socket.io.js"></script>
