@@ -44,13 +44,12 @@ html, body {
 }
 .chat{
     position: absolute;
-    width: 70%;
+    width: 80%;
     height: 90%;
-    margin-left: 15%;
+    margin-left: 0%;
     margin-top: 2.5%;
-    background-color: red;
-    visibility: hidden;
     z-index: 0;
+    visibility: hidden;
 }
 .chat form{
     position: absolute;
@@ -75,7 +74,7 @@ html, body {
 .campo_msg{
     width: 80%;
     height: 70%;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 5%;
     flex-direction: column;
     justify-content: center;
@@ -101,11 +100,12 @@ html, body {
 }
 
 .online{
-    border-top: 1px solid blue;
-    width: 90%;
-    margin-top: 5%;
-    margin-left: 5%;
+    color: green;
+    width: 10%;
+    margin-top: 10%;
+    margin-left: 85%;
     position: absolute;
+    border-bottom: 1px solid green;
     visibility: hidden;
 }
 
