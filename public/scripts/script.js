@@ -17,7 +17,6 @@ document.querySelector('#username').addEventListener('blur',()=>{
 
 document.querySelector('#btnuser').addEventListener('click',(e)=>{
     e.preventDefault();
-    //document.getElementById('divChat').style.zIndex = 99;
     document.getElementById('divChat').style.visibility = 'visible';
     document.getElementById('online').style.visibility = 'visible';
     document.getElementById('divUser').style.zIndex = -1;
