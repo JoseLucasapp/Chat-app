@@ -12,7 +12,6 @@ html, body {
     text-align: center;
     color: blue;
     border-radius: 5px;
-    visibility: hidden;
     z-index: 0;
 }
 .user h1{
@@ -49,8 +48,8 @@ html, body {
     height: 90%;
     margin-left: 0%;
     margin-top: 2%;
-    background-color: green;
     z-index: 0;
+    visibility: hidden;
 }
 .chat form{
     position: absolute;
@@ -83,6 +82,7 @@ html, body {
     border: 1px blue solid;
     background-color: #BDBDBD;
     border-radius: 5px;
+    scroll-behavior: smooth;
 }
 .campo_msg li{
     list-style: none;
@@ -107,6 +107,7 @@ html, body {
     margin-left: 85%;
     position: absolute;
     border-bottom: 1px solid green;
+    visibility: hidden;
 }
 
 @media(max-width: 1000px){
