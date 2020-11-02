@@ -123,10 +123,13 @@ html, body {
 }
 
 @media(max-width: 1000px){
+    body{
+        height: 100%;
+    }
     .chat{
         width: 90%;
         height: 70%;
-        margin-top: 30%;
+        margin-top: 20%;
         margin-left: 5%;
     }
     .user{
@@ -135,16 +138,20 @@ html, body {
         margin-left: 25%;
     }
     .user h1{
-        margin-top: 10%;
+        margin-top: 60%;
         font-size: 30px;
         font-weight: bold;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .user input{
         margin-top: 5%;
-        width: 60%;
+        width: 80%;
         height: 15%;
         font-size: 20px;
+    }
+    .user button{
+        width: 30%;
+        height: 15%;
     }
     .chat input{
         width: 70%;
@@ -174,6 +181,6 @@ html, body {
         border: none;
         width: 90%;
         margin-top: 5%;
-        margin-left: 5%;
+        margin-left: 45%;
     }
 }
