@@ -28,8 +28,7 @@ html, body {
     color: blue;
     background-color: transparent;
     text-align: center;
-    border: 3px blue solid;
-    border-radius: 5px;
+    border: 1px solid blue;
 }
 .user button{
     margin-top: 5%;
@@ -133,25 +132,26 @@ html, body {
         margin-left: 5%;
     }
     .user{
-        width: 50%;
+        width: 70%;
         height: 15%;
-        margin-left: 25%;
+        margin-left: 35%;
     }
     .user h1{
-        margin-top: 60%;
-        font-size: 30px;
+        margin-top: 80%;
+        font-size:50px;
         font-weight: bold;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     .user input{
         margin-top: 5%;
         width: 80%;
-        height: 15%;
-        font-size: 20px;
+        height: 25%;
+        font-size: 30px;
     }
     .user button{
         width: 30%;
-        height: 15%;
+        height: 25%;
+        font-size: 30px;
     }
     .chat input{
         width: 70%;
