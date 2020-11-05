@@ -1,6 +1,6 @@
 let socket = io();
 
-document.querySelector('#message').addEventListener('change',()=>{
+const validation = ()=>{
     message = document.querySelector('#message').value;
     if(message.length > 0 && message.length <= 50){
         document.querySelector('#sendbtn').disabled = false;
@@ -8,7 +8,7 @@ document.querySelector('#message').addEventListener('change',()=>{
     else{
         document.querySelector('#sendbtn').disabled = true;
     }
-})
+}
 
 document.querySelector('#username').addEventListener('blur',()=>{
     name = document.querySelector('#username').value;

@@ -59,21 +59,23 @@ html, body {
 .chat input{
     width: 84.85%;
     height: 100%;
-    border: 1px blue solid;
+    border: 1px #D8D8D8 solid;
     border-radius: 5px;
-    margin-top: 3%;
+    margin-top: 4%;
     font-size: 40px;
+    background-color: #848484;
+    color: white;
     text-align: center;
 }
 .chat button{
     height: 100%;
     position: absolute;
     width: 15%;
-    background-color: white;
-    color: blue;
-    border: 1px solid blue ;
+    background-color: #848484;
+    color: #D8D8D8;
+    border: 1px solid #D8D8D8 ;
     border-radius: 5px;
-    margin-top: 3%;
+    margin-top: 4%;
     margin-left: 0.3%;
 }
 .campo_msg{
@@ -82,8 +84,8 @@ html, body {
     flex-direction: column;
     justify-content: center;
     overflow-y: scroll;
-    border: 1px blue solid;
-    background-color: #BDBDBD;
+    border: 1px #D8D8D8 solid;
+    background-color: #848484;
     border-radius: 5px;
     scroll-behavior: smooth;
 }
@@ -158,15 +160,17 @@ html, body {
         font-size: 30px;
     }
     .chat input{
-        width: 79%;
+        width: 70%;
         height: 40%;
         font-size: 30px;
         margin-top: 65%;
+        margin-left: 10%;
     }
     .chat button{
         width: 20%;
         height: 40%;
         font-size: 30px;
+        margin-top: 65%;
     }
     .campo_msg{
         margin-top: 2%;
