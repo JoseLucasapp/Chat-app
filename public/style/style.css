@@ -57,19 +57,24 @@ html, body {
     bottom: 1px;
 }
 .chat input{
-    width: 80.03%;
-    height: 90%;
+    width: 84.85%;
+    height: 100%;
     border: 1px blue solid;
     border-radius: 5px;
-    margin-top: 3.5%;
+    margin-top: 3%;
+    font-size: 40px;
+    text-align: center;
 }
 .chat button{
-    height: 90%;
-    width: 19.6%;
+    height: 100%;
+    position: absolute;
+    width: 15%;
     background-color: white;
     color: blue;
     border: 1px solid blue ;
     border-radius: 5px;
+    margin-top: 3%;
+    margin-left: 0.3%;
 }
 .campo_msg{
     width: 99.9%;
