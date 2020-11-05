@@ -1,5 +1,16 @@
 let socket = io();
 
+document.querySelector('#message').addEventListener('change',()=>{
+    message = document.querySelector('#message').value;
+    if(message.length > 0 && message.length < 50){
+        document.querySelector('#sendbtn').disabled = false;
+    }
+    else{
+        document.querySelector('#sendbtn').disabled = true;
+        document.querySelector('#message').style.borderColor = 'red';
+    }
+})
+
 document.querySelector('#username').addEventListener('blur',()=>{
     name = document.querySelector('#username').value;
     if(name.length > 0){
