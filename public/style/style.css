@@ -167,15 +167,15 @@ html, body {
         font-size: 30px;
     }
     .chat input{
-        width: 70%;
-        height: 40%;
+        width: 80%;
+        height: 70%;
         font-size: 30px;
         margin-top: 65%;
-        margin-left: 10%;
+        margin-left: 5%;
     }
     .chat button{
         width: 20%;
-        height: 40%;
+        height: 70%;
         font-size: 30px;
         margin-top: 65%;
     }
