@@ -2,12 +2,15 @@ let socket = io();
 
 const validation = ()=>{
     message = document.querySelector('#message').value;
-    if(message.length > 0 && message.length <= 50){
+    if(message.length > 1 && message.length <= 50){
         document.querySelector('#sendbtn').disabled = false;
     }
     else{
-        document.querySelector('#sendbtn').disabled = true;
+        block();
     }
+}
+const block = ()=>{
+    document.querySelector('#sendbtn').disabled = true;
 }
 
 document.querySelector('#username').addEventListener('blur',()=>{
@@ -43,6 +46,7 @@ document.querySelector('#formmsg').addEventListener('submit', (e) => {
     };
     socket.emit('message', msgObject);
     document.getElementById('message').value = '';
+    block();
     return false;
 });
 

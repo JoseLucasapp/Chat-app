@@ -127,7 +127,13 @@ html, body {
     border-radius: 50%;
     background-color: green;
 }
-
+.ads{
+    margin-top: 30%;
+}
+.ads a{
+    text-decoration: none;
+    color: green;
+}
 @media(max-width: 1000px){
     body{
         height: 100%;
@@ -207,5 +213,8 @@ html, body {
         margin-left: 100px;
         border-radius: 50%;
         background-color: green;
+    }
+    .ads{
+        font-size: 35px;
     }
 }
