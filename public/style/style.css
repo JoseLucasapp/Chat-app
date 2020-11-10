@@ -25,10 +25,11 @@ html, body {
     width: 90%;
     height: 5%;
     font-size: 20px;
-    color: blue;
+    color: purple;
     background-color: transparent;
     text-align: center;
-    border: 1px solid blue;
+    border: none;
+    border-bottom: 1px solid purple;
 }
 .user button{
     margin-top: 5%;
