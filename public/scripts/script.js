@@ -2,7 +2,7 @@ let socket = io();
 
 const validation = ()=>{
     message = document.querySelector('#message').value;
-    if(message.length > 1 && message.length <= 50){
+    if(message.length >= 1 && message.length <= 50){
         document.querySelector('#sendbtn').disabled = false;
     }
     else{
