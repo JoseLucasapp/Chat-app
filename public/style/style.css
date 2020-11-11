@@ -192,6 +192,7 @@ html, body {
         height: 3%;
         font-size: 25px;
         overflow-x: scroll;
+        margin: 2%;
     }
     .campo_msg li span{
         font-size: 30px;
