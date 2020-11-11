@@ -27,6 +27,8 @@ io.on('connection',(socket)=>{
         users--;
         if(users <= 0){
             users = 0;
+            let all = messages.length;
+            messages.splice(0,all);
         }
         io.emit('userOn', users);
     });
