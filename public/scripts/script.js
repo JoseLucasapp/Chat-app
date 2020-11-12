@@ -1,14 +1,14 @@
 let socket = io();
 
-const validation = ()=>{
+document.querySelector('#message').addEventListener('change',()=>{
     message = document.querySelector('#message').value;
-    if(message.length >= 1 && message.length <= 50){
+    if(message.length > 0 && message.length < 51){
         document.querySelector('#sendbtn').disabled = false;
     }
     else{
         block();
     }
-}
+})
 const block = ()=>{
     document.querySelector('#sendbtn').disabled = true;
 }
