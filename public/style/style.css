@@ -60,7 +60,7 @@ html, body {
 .chat input{
     width: 84.85%;
     height: 100%;
-    border: 1px #CC2EFA solid;
+    border: 1px #585858 solid;
     border-radius: 5px;
     margin-top: 4%;
     font-size: 40px;
@@ -78,7 +78,7 @@ html, body {
     background-repeat: no-repeat;
     background-color: #E2A9F3;
     color: #6A0888;
-    border: 1px solid #CC2EFA ;
+    border: 1px solid #585858 ;
     border-radius: 5px;
     margin-top: 4%;
     margin-left: 0.3%;
@@ -89,7 +89,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     overflow-y: scroll;
-    border: 1px #CC2EFA solid;
+    border: 1px #585858 solid;
     background-color: #E2A9F3;
     border-radius: 5px;
     scroll-behavior: smooth;
