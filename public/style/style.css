@@ -72,6 +72,10 @@ html, body {
     height: 100%;
     position: absolute;
     width: 15%;
+    background-image: url('/assets/sendicon.png');
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #E2A9F3;
     color: #6A0888;
     border: 1px solid #CC2EFA ;
