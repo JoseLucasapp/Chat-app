@@ -1,11 +1,9 @@
-const express = require('express');
+let app = require('./config/server');
 const http = require('http').createServer(app);
 let io = require('socket.io')(http);
 let consign = require('consign');
-const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/public'));
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public/index.html');
 });
