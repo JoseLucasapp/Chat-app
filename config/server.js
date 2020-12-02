@@ -7,6 +7,8 @@ app.set('views', './app/views');
 
 app.use(express.static('./app/public'));
 
-consign().include('app/routes').into(app);
+consign().include('app/routes')
+    .then('app/models')
+    .into(app);
 
 module.exports = app;
