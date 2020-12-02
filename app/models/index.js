@@ -1,4 +1,6 @@
 module.exports.ioModel = (io)=>{
+    messages = [];
+    users = 0;
     io.on('connection',(socket)=>{
         users++;
         socket.on('message',(msgObject)=>{
