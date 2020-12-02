@@ -1,7 +1,8 @@
 const express = require('express');
-const app = express();
 const http = require('http').createServer(app);
 let io = require('socket.io')(http);
+let consign = require('consign');
+const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
