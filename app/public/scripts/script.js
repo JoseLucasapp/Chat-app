@@ -74,6 +74,7 @@ socket.on('userOn',(users)=>{
 
 const renderMsg = (msgObject)=>{
     $('#msg').append($('<li><span>'+msgObject.name +'  </span>  ' + msgObject.message+'</li>'));
+    document.querySelector('#campo_msg').scrollTo(0, 9999999999999999);
 }
 const renderUser = (user)=>{
     document.querySelector('#users').innerHTML = user + ' Online users';

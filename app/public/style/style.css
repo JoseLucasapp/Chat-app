@@ -92,7 +92,6 @@ html, body {
     border: 1px #585858 solid;
     background-color: #E2A9F3;
     border-radius: 5px;
-    scroll-behavior: smooth;
 }
 .campo_msg li{
     list-style: none;
