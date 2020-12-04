@@ -2,12 +2,28 @@
 <html>
     <head>
         <title>2112chat</title>
-        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/chat_style.css" />
     </head>
     <body>
+        <div class="root">
+            <!--Chat-->
+            <div class="chat" id="divChat">
+                <div class="campo_msg" id="campo_msg">
+                    <ul class="msg" id="msg"></ul>
+                </div>
+                <form id="formmsg">
+                    <input maxlength="50" type="text" id="message" />
+                    <button disabled id='sendbtn'></button>
+                </form>
+            </div>
+            <div id="online" class="online">
+                <div class="ondiv"></div><span id="users"></span>
+            </div>
+        </div>
+        <!--First Page username-->
         <div class="user" id="divUser">
             <h1>Welcome to 2112chat</h1>
-            <form id="form" method="GET" action="/chat">
+            <form id="form">
                 <input id="username" type="text" placeholder="Insert your name here" />
                 <button id="btnuser" disabled>Go to Chat</button>
             </form>
@@ -20,6 +36,8 @@
             </div>
         </div>
             
-        <script src="scripts/index_script.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="scripts/chat_script.js"></script>
     </body>
 </html>

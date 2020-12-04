@@ -1,5 +1,5 @@
 module.exports = (app)=>{
-    app.get('/chat',(req,res)=>{
+    app.post('/chat',(req,res)=>{
         res.render('chat');
     });
 }
