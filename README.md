@@ -14,12 +14,14 @@
 
 <p align='center'>
   <h3>How to use</h3>
+  
   ```shell
   cd 'your favorite folder'
   git clone https://github.com/JoseLucasapp/Chat-app
   cd Chat-app
   node index.js
   ```
+  
 </p>
 
 <p align='center'>
