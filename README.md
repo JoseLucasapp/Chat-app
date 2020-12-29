@@ -3,14 +3,26 @@
   <h3>Used Tools</h3>
   <table>
     <tr>
-      <td>Socket.io</td>
-      <td>MVC</td>
       <td>Javascript</td>
+      <td>Socket.io</td>
       <td>EJS</td>
       <td>Express</td>
+      <td>Consign</td>
     </tr>
   </table>
 </p>
+
 <p align='center'>
-  <a href='https://chat2112jl.herokuapp.com/'>Link</a>
+  <h3>How to use</h3>
+  ```shell
+  cd 'your favorite folder'
+  git clone https://github.com/JoseLucasapp/Chat-app
+  cd Chat-app
+  node index.js
+  ```
+</p>
+
+<p align='center'>
+  <h3>Author</h3>
+  <a href='instagram.com/jlucasgf/?hl=pt-br'>José Lucas</a>
 </p>
