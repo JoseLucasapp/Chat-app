@@ -150,6 +150,17 @@ html, body {
     text-decoration: none;
     color: green;
 }
+button:focus{
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+input:focus{
+outline: thin dotted;
+outline: 0px auto -webkit-focus-ring-color;
+outline-offset: 0px;
+}
+
 @media(max-width: 1000px){
     body{
         height: 100%;

@@ -9,7 +9,6 @@ app.set('views', './app/views');
 
 app.use(express.static('./app/public'));
 
-require('./app/routes/chat')(app);
 require('./app/routes/home')(app);
 
 const DAO = require('./app/models/IO')();
