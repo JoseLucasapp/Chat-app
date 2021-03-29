@@ -19,7 +19,7 @@
   cd 'your favorite folder'
   git clone https://github.com/JoseLucasapp/Chat-app
   cd Chat-app
-  node index.js
+  npm run production
   ```
   
 </p>
