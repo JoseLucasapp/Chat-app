@@ -17,9 +17,9 @@ const block = ()=>{
     document.querySelector('#sendbtn').disabled = true;
 }
 
-document.querySelector('#username').addEventListener('blur',()=>{
+const unlockBtn = ()=>{
     name = document.querySelector('#username').value;
-    if(name.length > 0){
+    if(name.length > 1){
         document.getElementById('btnuser').disabled = false;
         document.getElementById('sendbtn').disabled = false;
         document.getElementById('btnuser').style.borderColor = 'green';
@@ -33,7 +33,7 @@ document.querySelector('#username').addEventListener('blur',()=>{
         document.getElementById('btnuser').style.color = 'gray';
         document.querySelector('#username').style.borderBottom = '1px solid purple';
     }
-});
+};
 
 document.querySelector('#btnuser').addEventListener('click',(e)=>{
     e.preventDefault();
@@ -78,7 +78,7 @@ socket.on('userOn',(users)=>{
 
 
 const renderMsg = (msgObject)=>{
-    $('#msg').append($('<li><span>'+msgObject.name +'  </span>  ' + msgObject.message+''+'<span class="time">'+msgObject.date+'</span>'+'</li>'));
+    $('#msg').append($('<li><span class="name">'+msgObject.name +'  </span>  '+'<span class="msgtext">' + msgObject.message +'</span> '+'<span class="time">'+msgObject.date+'</span>'+'</li>'));
     document.querySelector('#campo_msg').scrollTo(0, 9999999999999999);
 }
 const renderUser = (user)=>{
