@@ -3,11 +3,9 @@
   <h3>Used Tools</h3>
   <table>
     <tr>
-      <td>Javascript</td>
       <td>Socket.io</td>
       <td>EJS</td>
       <td>Express</td>
-      <td>Consign</td>
     </tr>
   </table>
 </p>
@@ -19,6 +17,7 @@
   cd 'your favorite folder'
   git clone https://github.com/JoseLucasapp/Chat-app
   cd Chat-app
+  npm install
   npm run production
   ```
   
