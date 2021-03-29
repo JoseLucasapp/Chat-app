@@ -1,4 +1,8 @@
 let socket = io();
+let date = new Date()
+let hour = date.getHours(); 
+let min = date.getMinutes();
+let total = ' '+hour + ':' + min;
 
 document.querySelector('#message').addEventListener('change',()=>{
     message = document.querySelector('#message').value;
@@ -46,6 +50,7 @@ document.querySelector('#formmsg').addEventListener('submit', (e) => {
     let msgObject = {
         message: msg,
         name: name,
+        date: total
     };
     socket.emit('message', msgObject);
     document.getElementById('message').value = '';
@@ -73,7 +78,7 @@ socket.on('userOn',(users)=>{
 
 
 const renderMsg = (msgObject)=>{
-    $('#msg').append($('<li><span>'+msgObject.name +'  </span>  ' + msgObject.message+'</li>'));
+    $('#msg').append($('<li><span>'+msgObject.name +'  </span>  ' + msgObject.message+''+'<span class="time">'+msgObject.date+'</span>'+'</li>'));
     document.querySelector('#campo_msg').scrollTo(0, 9999999999999999);
 }
 const renderUser = (user)=>{

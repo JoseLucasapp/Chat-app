@@ -1,4 +1,8 @@
-module.exports.ioModel = (io)=>{
+function IO(){
+
+}
+
+IO.prototype.ioModel = (io)=>{
     messages = [];
     users = 0;
     io.on('connection',(socket)=>{
@@ -23,4 +27,8 @@ module.exports.ioModel = (io)=>{
         socket.emit('previoususers',users);
         socket.broadcast.emit('userOn',users);
     });
+}
+
+module.exports = ()=>{
+    return IO;
 }

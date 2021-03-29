@@ -82,6 +82,11 @@ html, body {
     border-radius: 5px;
     margin-top: 4%;
     margin-left: 0.3%;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.chat button:hover{
+    transform: scale(1);
 }
 .campo_msg{
     width: 99.9%;
@@ -108,6 +113,12 @@ html, body {
 .campo_msg li span{
     color:  #6A0888;
     font-size: 20px;
+}
+.campo_msg li .time{
+    color: grey;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .online{
